@@ -1,3 +1,5 @@
+using Newtonsoft.Json;
+
 namespace DesafioProjetoHospedagem.Models;
 
 public class Pessoa
@@ -16,6 +18,7 @@ public class Pessoa
     }
 
     public string Nome { get; set; }
+    [JsonProperty("lastname")]
     public string Sobrenome { get; set; }
     public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
 }
